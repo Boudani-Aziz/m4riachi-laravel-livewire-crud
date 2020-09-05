@@ -10955,3 +10955,23 @@ html body .m-b-md {
   margin-bottom: 30px;
 }
 
+html body .desc::after {
+  content: "\25BC";
+  font-weight: 900;
+  right: 16px;
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+html body .asc::after {
+  content: "\25B2";
+  font-weight: 900;
+  right: 16px;
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+html body .width120 {
+  width: 120px;
+}
+

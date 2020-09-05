@@ -26,11 +26,11 @@
         <thead>
             <tr>
                 <th scope="col" style="width: 80px">Photo</th>
-                <th scope="col">Name</th>
-                <th scope="col" style="width: 100px" class="text-right">Price</th>
-                <th scope="col" style="width: 100px" class="text-center">Active</th>
-                <th scope="col" style="width: 120px" class="text-center">Create at</th>
-                <th scope="col" style="width: 120px" class="text-center">Action</th>
+                <th scope="col" wire:click="order('name')" class="{{$orderBy['column'] == 'name' ? $orderBy['direction'] : ''}}">Name </th>
+                <th scope="col" wire:click="order('price')" class="text-right width120 {{$orderBy['column'] == 'price' ? $orderBy['direction'] : ''}}">Price</th>
+                <th scope="col" wire:click="order('active')" class="text-center width120 {{$orderBy['column'] == 'active' ? $orderBy['direction'] : ''}}">Active</th>
+                <th scope="col" wire:click="order('created_at')" class="text-center width120 {{$orderBy['column'] == 'created_at' ? $orderBy['direction'] : ''}}">Create at</th>
+                <th scope="col" class="text-center width120 ">Action</th>
             </tr>
         </thead>
         <tbody>

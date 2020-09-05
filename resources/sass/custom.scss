@@ -48,5 +48,24 @@ html{
         .m-b-md {
             margin-bottom: 30px;
         }
+
+        .desc::after {
+            content: "▼";
+            font-weight: 900;
+            right: 16px;
+            font-size: 1rem;
+            margin-left: 4px;
+        }
+
+        .asc::after {
+            content: "▲";
+            font-weight: 900;
+            right: 16px;
+            font-size: 1rem;
+            margin-left: 4px;
+        }
+        .width120 {
+            width: 120px;
+        }
     }
 }

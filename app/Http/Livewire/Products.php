@@ -13,6 +13,10 @@ class Products extends Component
 
     public $product;
     public $search = '';
+    public $orderBy = [
+        'column' => 'id',
+        'direction' => 'desc'
+    ];
 
     //to show create or edit form
     public $mode = [
@@ -43,8 +47,19 @@ class Products extends Component
         $this->mode[$mode] = true;
 
         if (!is_null($item)) {
-            $this->product = $item ;
+            $this->product = $item;
         }
+    }
+
+    public function order($column)
+    {
+        if ($this->orderBy['column'] != $column) $direction = 'asc';
+        else $direction = ($this->orderBy['direction'] == 'asc') ? 'desc' : 'asc';
+
+        $this->orderBy = [
+            'column' => $column,
+            'direction' => $direction
+        ];
     }
 
     // Resetting Pagination After Filtering Data to the first page
@@ -56,7 +71,7 @@ class Products extends Component
     public function render()
     {
         return view('livewire.products.index', [
-            'collection' => Product::where('name', 'like', '%' . $this->search . '%')->orderBy('id', 'desc')->paginate(5)
+            'collection' => Product::where('name', 'like', '%' . $this->search . '%')->orderBy(...array_values($this->orderBy))->paginate(5)
         ]);
     }
 
