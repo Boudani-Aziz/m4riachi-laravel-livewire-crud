@@ -14,7 +14,7 @@ A simple Laravel Livewire crud (create, read, update, delete) example with pagin
 3. `composer install`
 4. `npm install`
 5. `npm run dev`
-6. `cp .env.example .env` (to have to change in .env file the DB connection param)
+6. `cp .env.example .env` (you have to change in .env file the DB connection param)
 7. `php artisan key:generate`
 8. `php artisan db:seed` (if you want to seed the table products with some fakes data)
 9. `php artisan serve`
