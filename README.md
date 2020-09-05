@@ -1,6 +1,6 @@
 # Laravel Livewire Crud
 
-A simple Laravel Livewire crud (create, read, update, delete) example with pagination, search and order, if can help any one, 
+A simple Laravel Livewire crud (create, read, update, delete) example with pagination, search, order and file upload. if can help any one, 
 
 ## Configuration
 - php ^7.3 
